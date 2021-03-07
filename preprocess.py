@@ -9,7 +9,7 @@ from tqdm import tqdm
 from vocab import load_vocab, build_corpus
 
 
-def download_data(args):
+def download_data():
     # wget.download(url, dir)
     wget.download("https://raw.githubusercontent.com/e9t/nsmc/master/ratings_train.txt", "data")
     wget.download("https://raw.githubusercontent.com/e9t/nsmc/master/ratings_test.txt", "data")
@@ -71,7 +71,7 @@ if __name__ == "__main__":
         os.makedirs("data")
 
     if args.mode == "download":
-        download_data(args)
+        download_data()
     elif args.mode == "prepare":
         vocab = load_vocab("kowiki.model")
         args.corpus = "data/kowiki.txt"
