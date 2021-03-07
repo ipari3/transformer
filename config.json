@@ -8,5 +8,5 @@
     "n_output": 2,
     "weight_decay": 0,
     "learning_rate": 5e-5,
-    "adam_epsilon": 1e-8,
+    "adam_epsilon": 1e-8
 }
